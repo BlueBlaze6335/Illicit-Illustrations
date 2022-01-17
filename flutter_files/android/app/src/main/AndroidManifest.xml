@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.illicit_illustrations_2">
+    package="com.example.illicit_illustrations">
    <application
-        android:label="illicit_illustrations_2"
+        android:label="Illicit Illustrations"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
