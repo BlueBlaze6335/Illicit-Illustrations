@@ -56,13 +56,10 @@ Technologies used are :
 ## App View
 
 <p align="center">
-    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/splash_screen.jpg" alt="Original" width="360" height="640" style="padding:30px;">
-    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/home_screen.jpg" alt="Output"  width="360" height="640" style="padding:30px;">
-</p>
-<!-- GETTING STARTED -->
-<p align="center">
-    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/no_filter.jpg" alt="Original" width="360" height="640" style="padding:30px;">
-    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/filter.jpg" alt="Output"  width="360" height="640" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/splash_screen.jpg" alt="Original" width="180" height="340" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/home_screen.jpg" alt="Output"  width="180" height="340" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/no_filter.jpg" alt="Original" width="180" height="340" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/filter.jpg" alt="Output" width="180" height="340" style="padding:30px;">
 </p>
 
 # Getting Started
