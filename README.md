@@ -15,7 +15,7 @@
   <p align="center">
     <a href="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/flutter_files/README.md">Flutter</a>
     ·
-    <a href="https://github.com/gdscjgec/ML-Gallery/blob/main/machine learning">Machine Learning</a>
+    <a href="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/machine%20learning/README.md">Machine Learning</a>
     
   </p>
 </p>
@@ -53,7 +53,17 @@ This project is an app for recreating the beauty captured by your mobile device 
 Technologies used are :
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dart.svg' alt='dart' height='40' align=center>](https://dart.dev/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/flutter.svg' alt='flutter' height='40' align=center>](https://flutter.dev/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/tensorflow.svg' alt='tf' height='40' align=center>](https://www.tensorflow.org/lite/api_docs)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/keras.svg' alt='keras' height='40' align=center>](https://keras.io/guides/)
 
+## App View
+
+<p align="center">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/splash_screen.jpg" alt="Original" width="360" height="640" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/home_screen.jpg" alt="Output"  width="360" height="640" style="padding:30px;">
+</p>
 <!-- GETTING STARTED -->
+<p align="center">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/no_filter.jpg" alt="Original" width="360" height="640" style="padding:30px;">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/filter.jpg" alt="Output"  width="360" height="640" style="padding:30px;">
+</p>
 
 # Getting Started
 
