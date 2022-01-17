@@ -1,17 +1,18 @@
-<div align="center"><a href="jwoc.tech"><img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/jwoc_logo.svg" alt="Banner" width="20%"/></a></div>
+<div align="center"><a href="jwoc.tech"><img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/jwoc_logo.svg" alt="Banner" width="10%"/></a></div>
 
 <p align="center">
   <a href="https://github.com/BlueBlaze6335/Illicit-Illustrations">
-    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/output-onlinegiftools.gif" alt="Logo" width="480" height="480">
+    <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/output-onlinegiftools.gif" alt="Logo" width="300" height="200">
   </a>
 </p>
-
+<h2>
   <p align="center">
     Bringing Computer Vision and Flutter together , to build an awesome app !!
-    <br />
+    <br /></h2>
+    </p>
+    <p align="center">
     <strong>Explore the Directories</strong>
-    <br />
-    <br />
+  <p align="center">
     <a href="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/flutter_files/README.md">Flutter</a>
     ·
     <a href="https://github.com/gdscjgec/ML-Gallery/blob/main/machine learning">Machine Learning</a>
@@ -73,7 +74,7 @@ Contributions are what make the open source community such an amazing place to l
 1. Fork the Project
 2.  In the command terminal, run the following commands:
 ```
-    $ git clone https://github.com/BlueBlaze6335/Illicit-Illustrations
+    $ git clone https://github.com/{your username}/Illicit-Illustrations
     $ cd Illicit_Illustrations/
 ``` 
 5. Make the changes and add the features to the domains you want to work on   
