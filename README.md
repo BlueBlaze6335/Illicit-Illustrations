@@ -1,4 +1,4 @@
-<div align="center"><a href="jwoc.tech"><img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/jwoc_logo.svg" alt="Banner" width="10%"/></a></div>
+<div align="center"><a href="https://jwoc.tech/"><img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/jwoc_logo.svg" alt="Banner" width="10%"/></a></div>
 
 <p align="center">
   <a href="https://github.com/BlueBlaze6335/Illicit-Illustrations">
