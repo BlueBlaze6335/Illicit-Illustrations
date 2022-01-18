@@ -70,7 +70,7 @@ This project has been categorized into **two** parts - ***Machine Learning*** an
 
 # Roadmap
 
-See the [open issues](https://github.com/BlueBlaze6335/Illicit-Illustrations/issues) for a list of Projects you can work on (and learn).
+See the [open issues](https://github.com/BlueBlaze6335/Illicit-Illustrations/issues) for a list of Projects you can work on (and learn). If you find an interesting issue , please comment on it , and only after you are assigned , you can submit your PR !! Please dont spam PR , as it becomes difficult for the maintainers to keep a track on contributions !!
 
 <!-- CONTRIBUTING -->
 
