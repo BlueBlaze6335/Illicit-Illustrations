@@ -31,6 +31,9 @@
       </ul>
     </li>
     <li>
+      <a href="#rules">Rules</a>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -61,6 +64,16 @@ Technologies used are :
     <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/no_filter.jpg" alt="Original" width="180" height="340" style="padding:30px;">
     <img src="https://github.com/BlueBlaze6335/Illicit-Illustrations/blob/main/assets/filter.jpg" alt="Output" width="180" height="340" style="padding:30px;">
 </p>
+
+# Rules
+
+Follow these rules otherwise your contribution will not be valued !
+- Follow the [students manual](https://jwoc.tech/docs/student-manual) thoroughly.
+- Go to the [open issues](https://github.com/BlueBlaze6335/Illicit-Illustrations/issues) and request for assignment with the proposition of what you want to add to the project with respect to the issue. If you have another idea or you have spotted a bug, and you dont find them in issues , dont be hesistant to raise one.
+-  ***Do not spam PRs (pull resquests) if you are not assigned to an issue.***
+- If you are assigned to an issue and your work is done , recheck and put all the files together and then submit a PR. Dont make unnecessary PRs for the updation of your single contribution.
+-  ***Be polite and abstain from using vulgar language , name calling and harrassing other contributors or the mentors.***
+- If you find someone breaking the above rule , inform the mentor and also inform the administrators of [JWOC](mailto:admin@jwoc.tech).
 
 # Getting Started
 
@@ -104,4 +117,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Mail us at    -  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/gmail.svg' alt='gmail' height='40' align=center>](mailto:pb2306@ece.jgec.ac.in)
 <p> </p>
 
-<!-- Join Discord  -  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg' alt='Discord' height='40' align=center>](https://discord.gg/kTHMgAgmvf) -->
+Join Discord  -  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg' alt='Discord' height='40' align=center>](https://discord.gg/4ehzAQvHRg)
+<p> </p>
