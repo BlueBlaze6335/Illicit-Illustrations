@@ -1,9 +1,14 @@
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:illicit_illustrations_2/screens/image_editor_screen.dart';
 
 import 'package:image_picker/image_picker.dart';
+
+import 'package:path_provider/path_provider.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -30,6 +35,19 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     _image = File(image.path);
+
+    _image = File(image.path);
+/*
+    Uint8List imageBytes = await FlutterImageCompress.compressWithList(
+        await image.readAsBytes(),
+        quality: 100,
+        rotate: 0); */
+    Uint8List imageBytes = await image.readAsBytes();
+    final tempDir = await getTemporaryDirectory();
+    File file = await File('${tempDir.path}/image.png').create();
+
+    file.writeAsBytesSync(imageBytes);
+    _image = file;
 
     Navigator.push(
         context,
@@ -81,6 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
+
+                        color: Color(0xFF57CACE),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        )),
+
                       color: Color(0xFF57CACE),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
@@ -95,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
+
                     child: Image.asset(
                       'assets/shutter_icon.png',
                     ),
@@ -108,6 +134,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
+
+                        color: Color(0xFFD27AE7),
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        )),
+
                       color: Color(0xFFD27AE7),
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
@@ -122,6 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
+
                     child: Image.asset(
                       'assets/gallery_icon_2.png',
                     ),
