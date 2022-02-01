@@ -1,4 +1,4 @@
-name: build
+name: CI
 on: [pull_request]
 
 jobs:
@@ -9,9 +9,8 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - name: Get Dependencies
+      - name: Run Testcases
         working-directory: ./flutter_files
-        run: flutter pub get
-      - name: Run Tests
-        working-directory: ./flutter_files
-        run: flutter test
+        run: |
+          flutter pub get
+          flutter test
