@@ -36,6 +36,7 @@ dependencies:
   share:
   image:
   scroll_snap_list:
+  flutter_native_splash: ^2.0.1+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -69,6 +70,11 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+
+flutter_native_splash:
+  color: "#000000"
+  image: assets/splash_logo.png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
