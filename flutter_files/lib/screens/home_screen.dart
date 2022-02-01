@@ -88,10 +88,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Color.fromRGBO(52, 231, 237, 1),
-                          blurRadius: 7.0,
-                          spreadRadius: 2.0,
-                          offset: Offset(-4.0, 0.0),
+                          color: Colors.cyanAccent,
+                          blurRadius: 2.0,
+                          spreadRadius: 3.0,
+                          offset: Offset(5.0, 3.0),
                         ),
                       ],
                     ),
@@ -116,9 +116,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       boxShadow: [
                         BoxShadow(
                           color: Color.fromRGBO(242, 88, 252, 1),
-                          blurRadius: 8.0,
-                          spreadRadius: 2.0,
-                          offset: Offset(2.0, -1.0),
+                          blurRadius: 2.0,
+                          spreadRadius: 1.0,
+                          offset: Offset(5.0, 5.0),
                         ),
                       ],
                     ),
