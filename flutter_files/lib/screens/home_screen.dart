@@ -37,12 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
     _image = File(image.path);
 
     _image = File(image.path);
-/*
+
     Uint8List imageBytes = await FlutterImageCompress.compressWithList(
         await image.readAsBytes(),
         quality: 100,
-        rotate: 0); */
-    Uint8List imageBytes = await image.readAsBytes();
+        rotate: 0); 
     final tempDir = await getTemporaryDirectory();
     File file = await File('${tempDir.path}/image.png').create();
 
