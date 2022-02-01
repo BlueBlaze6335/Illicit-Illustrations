@@ -243,7 +243,8 @@ class _ImageEditorState extends State<ImageEditor> {
                                                           :
 
                                                           /// function to share processed image
-                                                          Utilities.shareImage(_output);
+                                                          Utilities.shareImage(
+                                                              _output);
                                                     },
                                                     child: Container(
                                                       height: 60,
@@ -275,30 +276,27 @@ class _ImageEditorState extends State<ImageEditor> {
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: SizedBox(
-                            height: 90,
-                            //width: 200,
-                            child: ScrollSnapList(
-                              listController: _controller,
-                              onItemFocus: (pos) {
-                                if (pos == 1) {
-                                  Utilities.showToast("VAN GOFF IMAGE");
-                                } else {
-                                  Utilities.showToast("NORMAL IMAGE");
-                                }
-                                setState(() {
-                                  current = pos;
-                                  _focusedIndex = pos;
-                                });
-                              },
-                              itemSize: 96,
-                              itemBuilder: _buildListItem,
-                              itemCount: 2,
-                              //reverse: true,
-                              //curve: Curves.bounceIn,
-                            ),
+                        child: SizedBox(
+                          height: 80,
+                          //width: 200,
+                          child: ScrollSnapList(
+                            listController: _controller,
+                            onItemFocus: (pos) {
+                              if (pos == 1) {
+                                Utilities.showToast("VAN GOGH IMAGE");
+                              } else {
+                                Utilities.showToast("NORMAL IMAGE");
+                              }
+                              setState(() {
+                                current = pos;
+                                _focusedIndex = pos;
+                              });
+                            },
+                            itemSize: 96,
+                            itemBuilder: _buildListItem,
+                            itemCount: 2,
+                            //reverse: true,
+                            //curve: Curves.bounceIn,
                           ),
                         ),
                       ),
