@@ -1,0 +1,17 @@
+name: build
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Get Dependencies
+        working-directory: ./flutter_files
+        run: flutter pub get
+      - name: Run Tests
+        working-directory: ./flutter_files
+        run: flutter test

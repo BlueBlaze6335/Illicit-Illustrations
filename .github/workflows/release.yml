@@ -1,0 +1,17 @@
+name: build
+on: [release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Get Dependencies
+        working-directory: ./flutter_files
+        run: flutter pub get
+      - name: Build apks
+        working-directory: ./flutter_files
+        run: flutter build apk --split-per-abi
