@@ -1,17 +1,25 @@
 name: build
-on: [release]
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Environment
+        uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - name: Get Dependencies
+      - name: Build for Android
         working-directory: ./flutter_files
-        run: flutter pub get
-      - name: Build apks
-        working-directory: ./flutter_files
-        run: flutter build apk --split-per-abi
+        run: |
+          flutter pub get
+          flutter build apk --split-per-abi
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./flutter_files/build/app/outputs/apk/release/*.apk
