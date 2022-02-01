@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share/share.dart';
 import 'dart:io';
@@ -17,6 +18,14 @@ class Utilities {
     );
   }
 
-
+  ///Function to show toast message
+  static showToast(String message){
+    Fluttertoast.showToast(
+        msg: message,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+    );
+  }
 
 }

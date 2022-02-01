@@ -243,7 +243,7 @@ class _ImageEditorState extends State<ImageEditor> {
                                                           :
 
                                                           /// function to share processed image
-                                                          Utilities.shareImage(_output!);
+                                                          Utilities.shareImage(_output);
                                                     },
                                                     child: Container(
                                                       height: 60,
@@ -283,7 +283,11 @@ class _ImageEditorState extends State<ImageEditor> {
                             child: ScrollSnapList(
                               listController: _controller,
                               onItemFocus: (pos) {
-                                // print(pos);
+                                if (pos == 1) {
+                                  Utilities.showToast("VAN GOFF IMAGE");
+                                } else {
+                                  Utilities.showToast("NORMAL IMAGE");
+                                }
                                 setState(() {
                                   current = pos;
                                   _focusedIndex = pos;
