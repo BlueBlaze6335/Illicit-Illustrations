@@ -98,13 +98,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
-
-                        color: Color(0xFF57CACE),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          bottomLeft: Radius.circular(20),
-                        )),
-
                       color: Color(0xFF57CACE),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
@@ -119,7 +112,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-
                     child: Image.asset(
                       'assets/shutter_icon.png',
                     ),
@@ -133,13 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
-
-                        color: Color(0xFFD27AE7),
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
-                        )),
-
                       color: Color(0xFFD27AE7),
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
@@ -154,7 +139,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-
                     child: Image.asset(
                       'assets/gallery_icon_2.png',
                     ),
