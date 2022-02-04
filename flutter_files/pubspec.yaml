@@ -37,6 +37,7 @@ dependencies:
   share:
   image:
   scroll_snap_list:
+  flutter_image_compress:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
