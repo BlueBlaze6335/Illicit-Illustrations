@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\toast_custom.xml",
+        "source": "D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\fluttertoast-8.0.8\\android\\src\\main\\res\\layout\\toast_custom.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "D:\\illicit-illustrations\\flutter_files\\build\\fluttertoast\\intermediates\\res\\merged\\release\\layout\\notification_action.xml",
+        "source": "C:\\Users\\sayan\\.gradle\\caches\\transforms-3\\55f398af59e8b14523f04c0740441de3\\transformed\\core-1.6.0\\res\\layout\\notification_action.xml"
+    }
+]

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:illicit_illustrations_2/models/image_processor.dart';
 import 'package:illicit_illustrations_2/utilities/util.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'package:share/share.dart';
 
@@ -197,7 +196,7 @@ class _ImageEditorState extends State<ImageEditor> {
                                                           /// function to save processed image to gallery
                                                           ImageGallerySaver
                                                               .saveImage(
-                                                                  _output!,
+                                                                  _output,
                                                                   quality: 100);
 
                                                       ScaffoldMessenger.of(
@@ -243,7 +242,8 @@ class _ImageEditorState extends State<ImageEditor> {
                                                           :
 
                                                           /// function to share processed image
-                                                          Utilities.shareImage(_output);
+                                                          Utilities.shareImage(
+                                                              _output);
                                                     },
                                                     child: Container(
                                                       height: 60,
@@ -275,30 +275,27 @@ class _ImageEditorState extends State<ImageEditor> {
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: SizedBox(
-                            height: 90,
-                            //width: 200,
-                            child: ScrollSnapList(
-                              listController: _controller,
-                              onItemFocus: (pos) {
-                                if (pos == 1) {
-                                  Utilities.showToast("VAN GOFF IMAGE");
-                                } else {
-                                  Utilities.showToast("NORMAL IMAGE");
-                                }
-                                setState(() {
-                                  current = pos;
-                                  _focusedIndex = pos;
-                                });
-                              },
-                              itemSize: 96,
-                              itemBuilder: _buildListItem,
-                              itemCount: 2,
-                              //reverse: true,
-                              //curve: Curves.bounceIn,
-                            ),
+                        child: SizedBox(
+                          height: 80,
+                          //width: 200,
+                          child: ScrollSnapList(
+                            listController: _controller,
+                            onItemFocus: (pos) {
+                              if (pos == 1) {
+                                Utilities.showToast("VAN GOGH IMAGE");
+                              } else {
+                                Utilities.showToast("NORMAL IMAGE");
+                              }
+                              setState(() {
+                                current = pos;
+                                _focusedIndex = pos;
+                              });
+                            },
+                            itemSize: 96,
+                            itemBuilder: _buildListItem,
+                            itemCount: 2,
+                            //reverse: true,
+                            //curve: Curves.bounceIn,
                           ),
                         ),
                       ),
