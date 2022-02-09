@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:illicit_illustrations_2/models/image_processor.dart';
 import 'package:illicit_illustrations_2/utilities/util.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'package:share/share.dart';
 
@@ -197,7 +196,7 @@ class _ImageEditorState extends State<ImageEditor> {
                                                           /// function to save processed image to gallery
                                                           ImageGallerySaver
                                                               .saveImage(
-                                                                  _output!,
+                                                                  _output,
                                                                   quality: 100);
 
                                                       ScaffoldMessenger.of(
@@ -233,6 +232,8 @@ class _ImageEditorState extends State<ImageEditor> {
                                                   /// Widget for share image icon
                                                   InkWell(
                                                     onTap: () async {
+                                                      print("log" +
+                                                          widget.image.path);
                                                       _focusedIndex == 0
                                                           ?
 

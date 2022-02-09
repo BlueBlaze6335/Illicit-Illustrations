@@ -3,12 +3,10 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
-import 'package:illicit_illustrations_2/screens/image_editor_screen.dart';
+import 'package:illicit_illustrations_2/screens/image_cropper.dart';
 
 import 'package:image_picker/image_picker.dart';
-
 import 'package:path_provider/path_provider.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ///allows us to pick image from gallery or camera
   final picker = ImagePicker();
 
-  ///this function to grab the image from camera and pass it onto the image editor screen to be processed
+  ///this function to grab the image from camera and pass it onto the image cropper screen to be processed
   pickImage() async {
     image = await picker.pickImage(source: ImageSource.camera);
     if (image == null) {
@@ -36,14 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
     _image = File(image.path);
 
-    _image = File(image.path);
-
     Uint8List imageBytes = await FlutterImageCompress.compressWithList(
         await image.readAsBytes(),
         quality: 100,
-        rotate: 0); 
+        rotate: 0);
     final tempDir = await getTemporaryDirectory();
-    File file = await File('${tempDir.path}/image.png').create();
+    DateTime now = DateTime.now();
+    File file = await File('${tempDir.path}/${now.toString()}').create();
 
     file.writeAsBytesSync(imageBytes);
     _image = file;
@@ -51,11 +48,12 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ImageEditor(image: _image),
+          builder: (context) =>
+              ImageCropper(imageBytes: _image.readAsBytesSync()),
         ));
   }
 
-  ///this function to grab the image from gallery and pass it onto the image editor screen to be processed
+  ///this function to grab the image from gallery and pass it onto the image cropper screen to be processed
   pickGalleryImage() async {
     image = await picker.pickImage(source: ImageSource.gallery);
     if (image == null) return null;
@@ -65,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ImageEditor(image: _image),
+          builder: (context) =>
+              ImageCropper(imageBytes: _image.readAsBytesSync()),
         ));
   }
 
@@ -98,28 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
-
                         color: Color(0xFF57CACE),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
                         )),
-
-                      color: Color(0xFF57CACE),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        bottomLeft: Radius.circular(20),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.cyanAccent,
-                          blurRadius: 2.0,
-                          spreadRadius: 3.0,
-                          offset: Offset(5.0, 3.0),
-                        ),
-                      ],
-                    ),
-
                     child: Image.asset(
                       'assets/shutter_icon.png',
                     ),
@@ -133,28 +115,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
-
                         color: Color(0xFFD27AE7),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(20),
                           bottomRight: Radius.circular(20),
                         )),
-
-                      color: Color(0xFFD27AE7),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color.fromRGBO(242, 88, 252, 1),
-                          blurRadius: 2.0,
-                          spreadRadius: 1.0,
-                          offset: Offset(5.0, 5.0),
-                        ),
-                      ],
-                    ),
-
                     child: Image.asset(
                       'assets/gallery_icon_2.png',
                     ),
