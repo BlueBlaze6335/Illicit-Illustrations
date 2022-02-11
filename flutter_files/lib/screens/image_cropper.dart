@@ -25,139 +25,174 @@ class _ImageCropperState extends State<ImageCropper> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(_croppedData == null ? 'Crop View' : "Preview"),
-        foregroundColor: Colors.black,
-        actions: [
-          IconButton(
-            onPressed: () {
-              saveImageAndNavigateToPropertyEditor();
-            },
-            icon: const Icon(Icons.next_plan),
-          )
-        ],
-      ),
-      body: Center(
-        child: Visibility(
-          visible: !_isCropping,
-          child: Column(
-            children: [
-              Expanded(
-                child: Visibility(
-                  visible: _croppedData == null,
-                  child: Stack(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Visibility(
+            visible: !_isCropping,
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  child: Row(
                     children: [
-                      Crop(
-                        controller: _cropController,
-                        image: widget.imageBytes,
-                        onCropped: (croppedData) {
-                          setState(() {
-                            _croppedData = croppedData;
-                            _isCropping = false;
-                          });
-                        },
-                        withCircleUi: _isCircleUi,
-                        onStatusChanged: (status) => setState(() {
-                          _statusText = <CropStatus, String>{
-                                CropStatus.nothing: 'Crop has no image data',
-                                CropStatus.loading:
-                                    'Crop is now loading given image',
-                                CropStatus.ready: 'Crop is now ready!',
-                                CropStatus.cropping:
-                                    'Crop is now cropping image',
-                              }[status] ??
-                              '';
-                        }),
-                        initialSize: 0.8,
-                      ),
-                    ],
-                  ),
-                  replacement: Center(
-                    child: _croppedData == null
-                        ? const SizedBox.shrink()
-                        : Image.memory(
-                            _croppedData!,
-                            width: MediaQuery.of(context).size.width,
-                          ),
-                  ),
-                ),
-              ),
-              if (_croppedData == null)
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.crop_7_5),
-                            onPressed: () {
-                              _isCircleUi = false;
-                              _cropController.aspectRatio = 16 / 4;
-                            },
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.crop_16_9),
-                            onPressed: () {
-                              _isCircleUi = false;
-                              _cropController.aspectRatio = 16 / 9;
-                            },
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.crop_5_4),
-                            onPressed: () {
-                              _isCircleUi = false;
-                              _cropController.aspectRatio = 4 / 3;
-                            },
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.crop_square),
-                            onPressed: () {
-                              _isCircleUi = false;
-                              _cropController
-                                ..withCircleUi = false
-                                ..aspectRatio = 1;
-                            },
-                          ),
-                          IconButton(
-                              icon: const Icon(Icons.circle),
-                              onPressed: () {
-                                _isCircleUi = true;
-                                _cropController.withCircleUi = true;
-                              }),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _isCropping = true;
-                            });
-                            _isCircleUi
-                                ? _cropController.cropCircle()
-                                : _cropController.crop();
-                          },
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16),
-                            child: Text('Crop!'),
-                          ),
+                      Text(
+                        _croppedData == null ? 'Crop View' : "Preview",
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
                         ),
                       ),
-                      const SizedBox(height: 40),
+                      const Spacer(),
+                      IconButton(
+                        onPressed: () {
+                          saveImageAndNavigateToPropertyEditor();
+                        },
+                        icon: const Icon(
+                          Icons.done,
+                          color: Colors.white,
+                        ),
+                      )
                     ],
                   ),
                 ),
-              const SizedBox(height: 16),
-              if (_croppedData == null) Text(_statusText),
-              const SizedBox(height: 16),
-            ],
+                Expanded(
+                  child: Visibility(
+                    visible: _croppedData == null,
+                    child: Stack(
+                      children: [
+                        Crop(
+                          controller: _cropController,
+                          image: widget.imageBytes,
+                          onCropped: (croppedData) {
+                            setState(() {
+                              _croppedData = croppedData;
+                              _isCropping = false;
+                            });
+                          },
+                          withCircleUi: _isCircleUi,
+                          onStatusChanged: (status) => setState(() {
+                            _statusText = <CropStatus, String>{
+                                  CropStatus.nothing: 'Crop has no image data',
+                                  CropStatus.loading:
+                                      'Crop is now loading given image',
+                                  CropStatus.ready: 'Crop is now ready!',
+                                  CropStatus.cropping:
+                                      'Crop is now cropping image',
+                                }[status] ??
+                                '';
+                          }),
+                          initialSize: 0.8,
+                        ),
+                      ],
+                    ),
+                    replacement: Center(
+                      child: _croppedData == null
+                          ? const SizedBox.shrink()
+                          : Image.memory(
+                              _croppedData!,
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                    ),
+                  ),
+                ),
+                if (_croppedData == null)
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: const Icon(
+                                Icons.crop_7_5,
+                                color: Color(0xFF57CACE),
+                              ),
+                              onPressed: () {
+                                _isCircleUi = false;
+                                _cropController.aspectRatio = 16 / 4;
+                              },
+                            ),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.crop_16_9,
+                                color: Color(0xFF57CACE),
+                              ),
+                              onPressed: () {
+                                _isCircleUi = false;
+                                _cropController.aspectRatio = 16 / 9;
+                              },
+                            ),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.crop_5_4,
+                                color: Color(0xFF57CACE),
+                              ),
+                              onPressed: () {
+                                _isCircleUi = false;
+                                _cropController.aspectRatio = 4 / 3;
+                              },
+                            ),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.crop_square,
+                                color: Color(0xFF57CACE),
+                              ),
+                              onPressed: () {
+                                _isCircleUi = false;
+                                _cropController
+                                  ..withCircleUi = false
+                                  ..aspectRatio = 1;
+                              },
+                            ),
+                            IconButton(
+                                icon: const Icon(
+                                  Icons.circle,
+                                  color: Color(0xFF57CACE),
+                                ),
+                                onPressed: () {
+                                  _isCircleUi = true;
+                                  _cropController.withCircleUi = true;
+                                }),
+                          ],
+                        ),
+                        const SizedBox(height: 16),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _isCropping = true;
+                              });
+                              _isCircleUi
+                                  ? _cropController.cropCircle()
+                                  : _cropController.crop();
+                            },
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16),
+                              child: Text('Crop!'),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 40),
+                      ],
+                    ),
+                  ),
+                const SizedBox(height: 16),
+                if (_croppedData == null)
+                  Text(
+                    _statusText,
+                    style: const TextStyle(
+                      color: Color(0xFF57CACE),
+                    ),
+                  ),
+                const SizedBox(height: 16),
+              ],
+            ),
+            replacement: const CircularProgressIndicator(),
           ),
-          replacement: const CircularProgressIndicator(),
         ),
       ),
     );
@@ -166,7 +201,7 @@ class _ImageCropperState extends State<ImageCropper> {
   void saveImageAndNavigateToPropertyEditor() async {
     final tempDir = await getTemporaryDirectory();
     DateTime now = DateTime.now();
-    File file = await File('${tempDir.path}/${now.toString()}').create();
+    File file = await File('${tempDir.path}/${now.toString()}.png').create();
 
     if (_croppedData != null) {
       file.writeAsBytesSync(_croppedData!);

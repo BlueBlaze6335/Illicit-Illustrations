@@ -232,6 +232,8 @@ class _ImageEditorState extends State<ImageEditor> {
                                                   /// Widget for share image icon
                                                   InkWell(
                                                     onTap: () async {
+                                                      print("log" +
+                                                          widget.image.path);
                                                       _focusedIndex == 0
                                                           ?
 

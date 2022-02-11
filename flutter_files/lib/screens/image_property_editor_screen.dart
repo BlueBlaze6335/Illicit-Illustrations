@@ -70,15 +70,24 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text('Edit View'),
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.cyan, //TODO
+        title: const Text(
+          'Edit View',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        elevation: 0,
         foregroundColor: Colors.black,
         actions: [
           IconButton(
             onPressed: () {
               saveImageAndNavigateToEditor();
             },
-            icon: const Icon(Icons.next_plan),
+            icon: const Icon(Icons.done),
           )
         ],
       ),
@@ -317,7 +326,7 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
     return SizedBox(
       height: 50,
       child: Card(
-        color: isSelected ? const Color(0xFFD27AE7) : const Color(0xff3b3b3b),
+        color: isSelected ? const Color(0xFFD27AE7) : const Color(0xFF57CACE),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Text(
@@ -337,7 +346,7 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
 
     final tempDir = await getTemporaryDirectory();
     DateTime now = DateTime.now();
-    File file = await File('${tempDir.path}/${now.toString()}').create();
+    File file = await File('${tempDir.path}/${now.toString()}.png').create();
 
     await Future.delayed(const Duration(seconds: 3));
 
