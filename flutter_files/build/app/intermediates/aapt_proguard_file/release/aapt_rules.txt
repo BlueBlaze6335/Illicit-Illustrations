@@ -1,0 +1,4 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class com.example.illicit_illustrations_2.MainActivity { <init>(); }
+-keep class io.flutter.plugins.imagepicker.ImagePickerFileProvider { <init>(); }
+-keep class io.flutter.plugins.share.ShareFileProvider { <init>(); }

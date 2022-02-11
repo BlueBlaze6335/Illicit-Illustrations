@@ -1,0 +1,4 @@
+com/example/flutterimagecompress/exif/ExifKeeper.java
+ com.example.flutterimagecompress.exif.ExifKeeper
+com/example/flutterimagecompress/BuildConfig.java
+ com.example.flutterimagecompress.BuildConfig
