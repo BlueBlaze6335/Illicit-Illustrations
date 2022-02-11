@@ -97,11 +97,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
+
                         color: Color(0xFF57CACE),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
                         )),
+
+                      color: Color(0xFF57CACE),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.cyanAccent,
+                          blurRadius: 2.0,
+                          spreadRadius: 3.0,
+                          offset: Offset(5.0, 3.0),
+                        ),
+                      ],
+                    ),
+
                     child: Image.asset(
                       'assets/shutter_icon.png',
                     ),
@@ -115,11 +132,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     width: 60,
                     decoration: const BoxDecoration(
+
                         color: Color(0xFFD27AE7),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(20),
                           bottomRight: Radius.circular(20),
                         )),
+
+                      color: Color(0xFFD27AE7),
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromRGBO(242, 88, 252, 1),
+                          blurRadius: 2.0,
+                          spreadRadius: 1.0,
+                          offset: Offset(5.0, 5.0),
+                        ),
+                      ],
+                    ),
+
                     child: Image.asset(
                       'assets/gallery_icon_2.png',
                     ),
