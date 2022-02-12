@@ -102,13 +102,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
-                        )),
+                        ),
 
-                      color: Color(0xFF57CACE),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        bottomLeft: Radius.circular(20),
-                      ),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.cyanAccent,
@@ -137,13 +132,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(20),
                           bottomRight: Radius.circular(20),
-                        )),
+                        ),
 
-                      color: Color(0xFFD27AE7),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
-                      ),
                       boxShadow: [
                         BoxShadow(
                           color: Color.fromRGBO(242, 88, 252, 1),

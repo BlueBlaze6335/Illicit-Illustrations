@@ -34,9 +34,16 @@ class _ImageCropperState extends State<ImageCropper> {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(5),
                   child: Row(
                     children: [
+                      IconButton(
+                        onPressed: () =>Navigator.pop(context),
+                        icon: const Icon(
+                          Icons.arrow_back_sharp,
+                          color: Colors.white,
+                        ),
+                      ),
                       Text(
                         _croppedData == null ? 'Crop View' : "Preview",
                         style: const TextStyle(
@@ -147,22 +154,14 @@ class _ImageCropperState extends State<ImageCropper> {
                                   ..aspectRatio = 1;
                               },
                             ),
-                            IconButton(
-                                icon: const Icon(
-                                  Icons.circle,
-                                  color: Color(0xFF57CACE),
-                                ),
-                                onPressed: () {
-                                  _isCircleUi = true;
-                                  _cropController.withCircleUi = true;
-                                }),
                           ],
                         ),
-                        const SizedBox(height: 16),
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: () {
+                        const SizedBox(height: 20),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          color: const Color(0xFFD27AE7),
+                          child: InkWell(
+                            onTap: () {
                               setState(() {
                                 _isCropping = true;
                               });
@@ -171,8 +170,8 @@ class _ImageCropperState extends State<ImageCropper> {
                                   : _cropController.crop();
                             },
                             child: const Padding(
-                              padding: EdgeInsets.symmetric(vertical: 16),
-                              child: Text('Crop!'),
+                              padding: EdgeInsets.all(8.0),
+                              child: Center(child: Text('CROP',style: TextStyle(color: Colors.white,fontSize: 16),)),
                             ),
                           ),
                         ),

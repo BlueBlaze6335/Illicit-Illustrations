@@ -73,7 +73,7 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
-        backgroundColor: Colors.cyan, //TODO
+        backgroundColor: Colors.black, //TODO
         title: const Text(
           'Edit View',
           style: TextStyle(
@@ -100,9 +100,7 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
               alignment: Alignment.topLeft,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: currentFilter == -1
-                    ? MediaQuery.of(context).size.height * 0.6
-                    : MediaQuery.of(context).size.height * 0.7,
+                height: MediaQuery.of(context).size.height * 0.6,
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -136,16 +134,13 @@ class _ImagePropertyEditorState extends State<ImagePropertyEditor> {
             ),
           ),
           AnimatedPositioned(
-            top: currentFilter == -1
-                ? MediaQuery.of(context).size.height * 0.6 + 10
-                : MediaQuery.of(context).size.height * 0.7 + 10,
+            top: MediaQuery.of(context).size.height * 0.6 + 10,
+
             bottom: 30,
             duration: const Duration(milliseconds: 500),
             curve: Curves.decelerate,
             child: SizedBox(
-              height: currentFilter == -1
-                  ? MediaQuery.of(context).size.height * 0.4 + 10
-                  : MediaQuery.of(context).size.height * 0.3 + 10,
+              height: MediaQuery.of(context).size.height * 0.3 + 10,
               width: MediaQuery.of(context).size.width,
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(15),
